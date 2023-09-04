@@ -7,6 +7,7 @@ import initStore from "./store";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 initStore().then((Store) => {
   root.render(
     <Provider store={Store}>

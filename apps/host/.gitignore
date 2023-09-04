@@ -12,6 +12,10 @@
 
 /.dist
 
+/dist
+
+/@mf-types
+
 # production
 /build
 
