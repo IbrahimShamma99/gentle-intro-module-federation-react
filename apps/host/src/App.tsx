@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {} from "./store";
+import { useStoreSelector } from "./use-selector";
+const App1 = React.lazy(() => import("app1/App"));
 
 function App() {
+  const data = useStoreSelector((state) => state);
+
+  console.log(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <App1 />
+      <div className="App">host</div>
+    </>
   );
 }
 
